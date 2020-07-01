@@ -11,7 +11,7 @@ class Ujian extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('v_ujian');
+		$this->load->view('v_test');
 	}
 
 }
