@@ -44,7 +44,7 @@ class Test extends CI_Controller {
 		}else{
 			$this->flasher->setFlash('Menghapus test gagal, coba periksa jaringan anda','','danger','');
 			redirect('admin/edit_test_page/'.$id_test);
-			
+		
 		}
 	}
 

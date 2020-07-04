@@ -35,11 +35,11 @@
           </li>
           <li class="nav-header">DATA TRYOUT</li>
           <li class="nav-item">
-            <a href="<?= base_url('admin/test_page'); ?>"  <?php if($title=="Test Page") echo "class='nav-link active'"; ?> class="nav-link">
+            <a href="<?= base_url('admin/test_page'); ?>"  <?php if($title=="Test Page" || $title=="Edit Test Page" ) echo "class='nav-link active'"; ?> class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>
                 Test
-                <span class="badge badge-light right">0</span>
+                <span class="badge badge-light right"><?= $jumlah_test; ?></span>
               </p>
             </a>
           </li>

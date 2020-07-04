@@ -35,5 +35,6 @@ $(function() {
 </script>
 
 <script type="text/javascript" src="<?= base_url('assets/adminlte/'); ?>dist/js/master.js"></script>
+
 </body>
 </html>

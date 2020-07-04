@@ -54,38 +54,109 @@
                       <a class="dropdown-item" tabindex="-1" href="#"><i class="fa fas fa-plus"></i> Add Question </a>
                       <a class="dropdown-item" tabindex="-1" href="#"><i class="fa fas fa-file-import"></i> Impor Question </a>
                     </div>
+                  <thead>
+                    <tr><td>Test questions <?= $test['test_name']; ?></td></tr>
+                  </thead>
                   
+                  <tbody>
                   <?php $no=1;foreach ($questions as $key) { ?>
-
-                    <thead>
                       <tr>
-                        <th>Question <?= $no; ?></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td> <?= $key->question ?>
+                        <td> 
+                        <h5>Question <?= $no; ?></h5>
+                        <?= $key->question ?>
                         <div class="collapse" id="collapseQuestion<?= $no ?>">
+                          <?php if ($key->tipe_question == "pilihan ganda"){ ?>
+                          <input type="hidden" name="kj" value="<?= $key->kunci_jawaban ?>" id="kj">
                           <table class="mt-2 p-0">
+                            <?php if(empty($key->pilihan_c)){ ?> <!-- jika pilihan c kosong otomatis yang ada pilihan a,b -->
                             <tr>
-                              <td> <i class="fa fa-check"></i></td>
+
+                              <td class="kj_a"></td>
                               <td>A) <?= $key->pilihan_a ?></td>
                             </tr>
                             <tr>
-                              <td></td>
+                              <td class="kj_b"></td>
                               <td>B) <?= $key->pilihan_b ?></td>
                             </tr>
+
+                            <?php }else if(empty($key->pilihan_d)){ ?> <!-- jika pilihan d kosong otomatis yang ada pilihan a,b,c-->
                             <tr>
-                              <td></td>
+                              <td class="kj_a"></td>
+                              <td>A) <?= $key->pilihan_a ?></td>
+                            </tr>
+                            <tr>
+                              <td class="kj_b"></td>
+                              <td>B) <?= $key->pilihan_b ?></td>
+                            </tr>
+                             <tr>
+                              <td class="kj_c"></td>
                               <td>C) <?= $key->pilihan_c ?></td>
                             </tr>
+
+                            <?php }else if(empty($key->pilihan_e)){ ?> <!-- jika pilihan e kosong otomatis yang ada pilihan a,b,c,d-->
                             <tr>
-                              <td></td>
+                              <td class="kj_a"></td>
+                              <td>A) <?= $key->pilihan_a ?></td>
+                            </tr>
+                            <tr>
+                              <td class="kj_b"></td>
+                              <td>B) <?= $key->pilihan_b ?></td>
+                            </tr>
+                             <tr>
+                              <td class="kj_c"></td>
+                              <td>C) <?= $key->pilihan_c ?></td>
+                            </tr>
+                             <tr>
+                              <td class="kj_d"></td>
                               <td>D) <?= $key->pilihan_d ?></td>
                             </tr>
+
+                            <?php }else{ ?>  <!-- otomatis yang ada pilihan a,b,c,d,e -->
+                              <tr>
+                              <td class="kj_a"></td>
+                              <td >A) <?= $key->pilihan_a ?></td>
+                            </tr>
+                            <tr>
+                              <td class="kj_b"></td>
+                              <td>B) <?= $key->pilihan_b ?></td>
+                            </tr>
+                             <tr>
+                              <td class="kj_c"></td>
+                              <td>C) <?= $key->pilihan_c ?></td>
+                            </tr>
+                             <tr>
+                              <td class="kj_d"></td>
+                              <td>D) <?= $key->pilihan_d ?></td>
+                            </tr>
+                            <tr>
+                              <td class="kj_e"></td>
+                              <td>D) <?= $key->pilihan_e ?></td>
+                            </tr>
+
+                            <?php } ?>
+                      
+                            
+                           
+                           
                           </table>
+
+                          <?php }else{ ?>
+
+                          <table class="mt-2 p-0">
+                            <tr>
+                              <td> <i class="fa fa-check"></i></td>
+                              <td>True</td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td>False</td>
+                            </tr>
+                          </table>
+
+                          <?php } ?>
                           <hr>
                           <small>
+                            <span>Tipe questions : <?= $key->tipe_question ?></span><br>
                             <span>Created at : <?= $key->created_at ?></span><br>
                             <span>Modifed at : 00.00</span>
                           </small>
@@ -112,9 +183,10 @@
 
                          </div>
                       </tr>                    
-                    </tbody>
 
                   <?php $no++;} ?>
+                  </tbody>
+
 
                     
                   </table>
@@ -155,5 +227,11 @@
 <?php 
   $this->load->view('admin/layouts/footer');
 ?>
+
+<!-- javascript pengaturan kunci jawaban check -->
+<script type="text/javascript">
+  var kj = document.getElementById('kj').value;
+  $('.kj_'+kj).html('<i class="fa fa-check"></i>');
+</script>
 
 <?= Flasher::flash() ?>
