@@ -1,0 +1,6 @@
+tr.tr-test a.btn{
+	display:none;
+}
+tr.tr-test:hover a.btn{
+	display:inline-block;
+}
