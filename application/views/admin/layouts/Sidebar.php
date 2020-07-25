@@ -45,7 +45,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-question"></i>
               <p>
                 Question
@@ -56,7 +56,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tag"></i>
               <p>
                 Categories
@@ -69,7 +69,7 @@
   
           <li class="nav-header">ANALYZE</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-link"></i>
               <p>
                 Links
@@ -79,7 +79,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-check"></i>
               <p>
                 Results
@@ -89,7 +89,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
               <p>
                 Access List

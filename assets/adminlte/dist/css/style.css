@@ -1,0 +1,17 @@
+tr.tr-test a.btn{
+	display:none;
+}
+tr.tr-test:hover a.btn{
+	display:inline-block;
+}
+
+.kotak-tab{
+	float:left;
+	margin-top:5px;
+	margin-right: 5px;
+	width: 100px;
+	text-align: center;
+	font-size:12px;
+	background:#f2f2f2;
+	padding:10px;
+}

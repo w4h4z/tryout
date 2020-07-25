@@ -51,7 +51,7 @@
                       Add Question <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" tabindex="-1" href="#"><i class="fa fas fa-plus"></i> Add Question </a>
+                      <a class="dropdown-item" tabindex="-1" href="<?= base_url('admin/questions_page/'.$test['id_test']) ?>"><i class="fa fas fa-plus"></i> Add Question </a>
                       <a class="dropdown-item" tabindex="-1" href="#"><i class="fa fas fa-file-import"></i> Impor Question </a>
                     </div>
                   <thead>
@@ -66,70 +66,70 @@
                         <?= $key->question ?>
                         <div class="collapse" id="collapseQuestion<?= $no ?>">
                           <?php if ($key->tipe_question == "pilihan ganda"){ ?>
-                          <input type="hidden" name="kj" value="<?= $key->kunci_jawaban ?>" id="kj">
+                          <input type="hidden" name="kj" value="<?= $key->kunci_jawaban ?>" id="kj<?= $no ?>">
                           <table class="mt-2 p-0">
                             <?php if(empty($key->pilihan_c)){ ?> <!-- jika pilihan c kosong otomatis yang ada pilihan a,b -->
                             <tr>
 
-                              <td class="kj_a"></td>
+                              <td class="kj_a_<?= $no ?>"></td>
                               <td>A) <?= $key->pilihan_a ?></td>
                             </tr>
                             <tr>
-                              <td class="kj_b"></td>
+                              <td class="kj_b_<?= $no ?>"></td>
                               <td>B) <?= $key->pilihan_b ?></td>
                             </tr>
 
                             <?php }else if(empty($key->pilihan_d)){ ?> <!-- jika pilihan d kosong otomatis yang ada pilihan a,b,c-->
                             <tr>
-                              <td class="kj_a"></td>
+                              <td class="kj_a_<?= $no ?>"></td>
                               <td>A) <?= $key->pilihan_a ?></td>
                             </tr>
                             <tr>
-                              <td class="kj_b"></td>
+                              <td class="kj_b_<?= $no ?>"></td>
                               <td>B) <?= $key->pilihan_b ?></td>
                             </tr>
                              <tr>
-                              <td class="kj_c"></td>
+                              <td class="kj_c_<?= $no ?>"></td>
                               <td>C) <?= $key->pilihan_c ?></td>
                             </tr>
 
                             <?php }else if(empty($key->pilihan_e)){ ?> <!-- jika pilihan e kosong otomatis yang ada pilihan a,b,c,d-->
                             <tr>
-                              <td class="kj_a"></td>
+                              <td class="kj_a_<?= $no ?>"></td>
                               <td>A) <?= $key->pilihan_a ?></td>
                             </tr>
                             <tr>
-                              <td class="kj_b"></td>
+                              <td class="kj_b_<?= $no ?>"></td>
                               <td>B) <?= $key->pilihan_b ?></td>
                             </tr>
                              <tr>
-                              <td class="kj_c"></td>
+                              <td class="kj_c_<?= $no ?>"></td>
                               <td>C) <?= $key->pilihan_c ?></td>
                             </tr>
                              <tr>
-                              <td class="kj_d"></td>
+                              <td class="kj_d_<?= $no ?>"></td>
                               <td>D) <?= $key->pilihan_d ?></td>
                             </tr>
 
                             <?php }else{ ?>  <!-- otomatis yang ada pilihan a,b,c,d,e -->
                               <tr>
-                              <td class="kj_a"></td>
+                              <td class="kj_a_<?= $no ?>"></td>
                               <td >A) <?= $key->pilihan_a ?></td>
                             </tr>
                             <tr>
-                              <td class="kj_b"></td>
+                              <td class="kj_b_<?= $no ?>"></td>
                               <td>B) <?= $key->pilihan_b ?></td>
                             </tr>
                              <tr>
-                              <td class="kj_c"></td>
+                              <td class="kj_c_<?= $no ?>"></td>
                               <td>C) <?= $key->pilihan_c ?></td>
                             </tr>
                              <tr>
-                              <td class="kj_d"></td>
+                              <td class="kj_d_<?= $no ?>"></td>
                               <td>D) <?= $key->pilihan_d ?></td>
                             </tr>
                             <tr>
-                              <td class="kj_e"></td>
+                              <td class="kj_e_<?= $no ?>"></td>
                               <td>D) <?= $key->pilihan_e ?></td>
                             </tr>
 
@@ -230,8 +230,14 @@
 
 <!-- javascript pengaturan kunci jawaban check -->
 <script type="text/javascript">
-  var kj = document.getElementById('kj').value;
-  $('.kj_'+kj).html('<i class="fa fa-check"></i>');
+  no = 1;
+  <?php foreach ($questions as $key) { ?>
+    var kj = document.getElementById('kj'+no).value;
+    $('.kj_'+kj+'_'+no).html('<i class="fa fa-check"></i>');
+    no++;
+  <?php } ?>
+
+ 
 </script>
 
 <?= Flasher::flash() ?>

@@ -38,17 +38,18 @@
               	<!-- Nav -->
                  <nav class="w-100">
 	              <div class="nav nav-tabs" id="product-tab" role="tablist">
-	                <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Test</a>
+	                <a class="nav-item nav-link active" id="test-tab" data-toggle="tab" href="#test-desc" role="tab" aria-controls="test-desc" aria-selected="true">Test</a>
 
-	                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Questions Bank</a>
+	                <a class="nav-item nav-link" id="question-bank-desc-tab" data-toggle="tab" href="#question-bank-desc" role="tab" aria-controls="question-bank-desc" aria-selected="false">Questions Bank</a>
 
-	                <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating" role="tab" aria-controls="product-rating" aria-selected="false">Categories</a>
+	                <a class="nav-item nav-link" id="categories-desc-tab" data-toggle="tab" href="#categories-desc" role="tab" aria-controls="product-rating" aria-selected="false">Categories</a>
+
+
 	              </div>
 	            </nav>
-
 	            <!-- Tab Panel -->
 	            <div class="tab-content p-3" id="nav-tabContent">
-	              <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"> 
+	              <div class="tab-pane fade show active" id="test-desc" role="tabpanel" aria-labelledby="test-tab"> 
               		<table id="example1" class="table table-bordered table-striped">
               		  <a href="" class="btn btn-dark btn-sm float-right" data-toggle="modal" data-target="#modal-default">New Test <i class="fa fa-plus"></i></a>
 	                  <thead>
@@ -88,9 +89,9 @@
 	                </table>
 	              </div>
 
-	              <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> </div>
+	              <div class="tab-pane fade" id="question-bank-desc" role="tabpanel" aria-labelledby="question-bank-desc-tab"> </div>
 
-	              <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab">  </div>
+	              <div class="tab-pane fade" id="categories-desc" role="tabpanel" aria-labelledby="categories-desc-tab">  </div>
 	            </div>
 
               </div>

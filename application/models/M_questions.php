@@ -11,7 +11,7 @@ class M_questions extends CI_Model{
 	}
 
 	public function checking($data){
-		$this->db->join('tbl_tipe_questions','tbl_tipe_questions.id_tipe_question = tbl_questions.id_question'); //join tbl_tipe_questions
+		$this->db->join('tbl_tipe_questions','tbl_tipe_questions.id_tipe_question = tbl_questions.id_tipe_question'); //join tbl_tipe_questions
 		$this->db->order_by('created_at','asc');
 		return $this->db->get_where('tbl_questions',$data);
 	}

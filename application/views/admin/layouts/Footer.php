@@ -22,6 +22,8 @@
 <!-- OPTIONAL SCRIPTS -->
 <script src="<?= base_url('assets/adminlte/'); ?>plugins/chart.js/Chart.min.js"></script>
 <script src="<?= base_url('assets/adminlte/'); ?>dist/js/demo.js"></script>
+<!-- Summernote -->
+<script src="<?= base_url('assets/adminlte/'); ?>plugins/summernote/summernote-bs4.min.js"></script>
 <script src="<?= base_url('assets/adminlte/'); ?>dist/js/pages/dashboard3.js"></script>
 
 <script type="text/javascript">
@@ -31,8 +33,11 @@ $(function() {
       "autoWidth": false,
       "ordering" : false,
     });
+
 });
 </script>
+
+
 
 <script type="text/javascript" src="<?= base_url('assets/adminlte/'); ?>dist/js/master.js"></script>
 

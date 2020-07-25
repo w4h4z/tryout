@@ -23,8 +23,11 @@
   <link rel="stylesheet" href="<?= base_url('assets/adminlte/'); ?>plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="<?= base_url('assets/adminlte/'); ?>plugins/toastr/toastr.min.css">
+    <!-- summernote -->
+  <link rel="stylesheet" href="<?= base_url('assets/adminlte/'); ?>plugins/summernote/summernote-bs4.css">
   <!-- Master.css -->
-  <link rel="stylesheet" href="<?= base_url('assets/adminlte/'); ?>dist/css/master.css">
+  <link rel="stylesheet" href="<?= base_url('assets/adminlte/'); ?>dist/css/style.css">
+
 
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">

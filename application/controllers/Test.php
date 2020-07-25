@@ -47,11 +47,4 @@ class Test extends CI_Controller {
 		
 		}
 	}
-
-	
-
-
 }
-
-/* End of file Ujian.php */
-/* Location: ./application/controllers/Ujian.php */

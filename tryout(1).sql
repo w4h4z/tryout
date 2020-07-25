@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2020 at 12:02 PM
+-- Generation Time: Jul 25, 2020 at 05:27 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -66,8 +66,8 @@ CREATE TABLE `tbl_questions` (
 --
 
 INSERT INTO `tbl_questions` (`id_question`, `question`, `pilihan_a`, `pilihan_b`, `pilihan_c`, `pilihan_d`, `pilihan_e`, `id_tipe_question`, `kunci_jawaban`, `token`, `created_at`) VALUES
-(1, 'Siapa first love mu ?', 'aku', 'dia', NULL, NULL, NULL, 1, 'a', 'generatexxx', '2020-07-03 04:13:41'),
-(2, 'apakah kamu seorang manusia?', NULL, NULL, NULL, NULL, NULL, 2, 't', 'generatexxx', '2020-07-03 04:18:37');
+(8, 'aku adalah', 'ada', 'tidak ada', NULL, NULL, NULL, 1, 'a', 'generatexxx', '2020-07-25 15:22:41'),
+(9, 'asd', 'aa', 'bb', NULL, NULL, NULL, 1, 'a', 'generatexxx', '2020-07-25 15:24:25');
 
 -- --------------------------------------------------------
 
@@ -111,9 +111,6 @@ CREATE TABLE `tbl_test` (
 
 INSERT INTO `tbl_test` (`id_test`, `test_name`, `time_test`, `id_paket`, `id_question`, `pilihan`, `token`, `created_at`) VALUES
 (1, 'try apps', NULL, NULL, NULL, NULL, 'generatexxx', '2020-07-03 04:07:48'),
-(5, 'Impka Test', NULL, NULL, NULL, NULL, '26108f4cc2a88dcbffc8a2e899d1ea43', '2020-07-03 10:33:39'),
-(7, 'Google Test', NULL, NULL, NULL, NULL, 'a4387bd248f85f2f4c879d4565db5cb9', '2020-07-04 09:39:17'),
-(8, 'Semesta Test', NULL, NULL, NULL, NULL, '3c7c852e74c80a035c3189662b49e8ab', '2020-07-04 09:46:19'),
 (9, 'Pembinaan Test', NULL, NULL, NULL, NULL, '34dd8f4e04ac4bbd3f56459723b913b6', '2020-07-04 09:57:41');
 
 -- --------------------------------------------------------
@@ -214,7 +211,7 @@ ALTER TABLE `tbl_paket`
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_role`
@@ -226,7 +223,7 @@ ALTER TABLE `tbl_role`
 -- AUTO_INCREMENT for table `tbl_test`
 --
 ALTER TABLE `tbl_test`
-  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_tipe_questions`
