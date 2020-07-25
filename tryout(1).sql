@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 05:27 PM
+-- Generation Time: Jul 25, 2020 at 06:46 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -66,8 +66,9 @@ CREATE TABLE `tbl_questions` (
 --
 
 INSERT INTO `tbl_questions` (`id_question`, `question`, `pilihan_a`, `pilihan_b`, `pilihan_c`, `pilihan_d`, `pilihan_e`, `id_tipe_question`, `kunci_jawaban`, `token`, `created_at`) VALUES
-(8, 'aku adalah', 'ada', 'tidak ada', NULL, NULL, NULL, 1, 'a', 'generatexxx', '2020-07-25 15:22:41'),
-(9, 'asd', 'aa', 'bb', NULL, NULL, NULL, 1, 'a', 'generatexxx', '2020-07-25 15:24:25');
+(12, '<p>Siapakah Ketua Senat 2022/2023 ?<br></p>', '<p>Guntur Satria Ajie<br></p>', '<p>Asep Setiawan<br></p>', '<p>Fathurrahman Rifqi Azzami<br></p>', '<p>Muhammad Faiz Syukron<br></p>', '<p>Ilham Jati Kusuma<br></p>', 1, 'c', '34dd8f4e04ac4bbd3f56459723b913b6', '2020-07-25 16:08:46'),
+(13, 'Jumlah Anggota HIMA 2019 / 2020 adalah sebanyak 129 orang.<br>', '', '', '', '', '', 2, 't', '34dd8f4e04ac4bbd3f56459723b913b6', '2020-07-25 16:13:54'),
+(14, '<p>Apa bener kalo cewe sensitif terus pake sensodyne, sensitif nya ilang ?<br></p>', '', '', '', '', '', 2, 't', 'generatexxx', '2020-07-25 16:18:03');
 
 -- --------------------------------------------------------
 
@@ -211,7 +212,7 @@ ALTER TABLE `tbl_paket`
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_role`
