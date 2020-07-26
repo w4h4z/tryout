@@ -72,6 +72,24 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/v_questions',$data);
 	}
 
+	public function edit_question_page($id_question)
+	{	
+		$data['title'] = 'Edit Question Page';
+		$data['email'] = $this->session->userdata('email');
+
+		$where = array('id_question'=>$id_question);
+		$data['questions'] = $this->m_questions->checking($where)->row_array();
+
+		$where_token = array('token' => $data['questions']['token']);
+		$data['test'] = $this->m_test->checking($where_token)->row_array();
+		$data['jumlah_test'] = $this->m_test->load_test()->num_rows();
+
+		// var_dump($data['questions']) or die;
+
+		$this->load->view('admin/layouts/master.php',$data); 
+		$this->load->view('admin/v_edit_questions',$data);
+	}
+
 
 
 
